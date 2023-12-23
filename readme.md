@@ -10,7 +10,7 @@ This QA system leverages the capabilities of state-of-the-art NLP models to prov
 
 ### Environment Setup:
 
-1. Create a `.env`` file in the root directory of the project. This file should contain the following environment variables:
+1. Create a `.env` file in the root directory of the project. This file should contain the following environment variables:
 
 ```
 PINECONE_ENV=<your_pinecone_environment>
