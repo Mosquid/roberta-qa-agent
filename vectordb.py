@@ -5,11 +5,16 @@ import pinecone
 
 load_dotenv()
 
-INDEX = "reranker-384-dim"
+INDEX = os.getenv("PINECONE_INDEX")
 ENV = os.getenv("PINECONE_ENV")
 API_KEY = os.getenv("PINECONE_API_KEY")
 
 pinecone.init(api_key=API_KEY, environment=ENV)
+
+
+def create_index():
+    if INDEX not in pinecone.list_indexes():
+        pinecone.create_index(name=INDEX, dimension=384)
 
 
 def create(vector):

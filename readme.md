@@ -15,9 +15,10 @@ This QA system leverages the capabilities of state-of-the-art NLP models to prov
 ```
 PINECONE_ENV=<your_pinecone_environment>
 PINECONE_API_KEY=<your_pinecone_api_key>
+PINECONE_INDEX=<your_pinecone_index_name>
 ```
 
 2. Create a `kb.json` file. This file should contain the knowledge base that the chatbot will use to answer questions. Ensure it follows the required JSON format.
-3. Run the `create_vectors`` function. This will generate and insert vectors into your Pinecone database, which are necessary for the chatbot to understand and retrieve information from the knowledge base.
+3. Run the `python setup.py`. This will generate and insert vectors into your Pinecone database, which are necessary for the chatbot to understand and retrieve information from the knowledge base.
 4. To ask a question, use the command line interface:
    `python main.py "<your question>"`
