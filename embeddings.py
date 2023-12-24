@@ -24,12 +24,10 @@ def create_vector(doc, id):
 
         vector = {
             "id": str(id),
-            "embeds": embeddings,
+            "values": embeddings[0],
             "metadata": {"doc": doc},
         }
-
-        res = vectordb.create(vector)
-        print(res)
+        return vector
 
     except (RuntimeError, TypeError, NameError) as err:
         print(err)

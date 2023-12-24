@@ -1,12 +1,8 @@
 from transformers import AutoTokenizer, AutoModel
-import vectordb
-import torch
-from pathlib import Path
-import json
-from utils import flatten_json
 import sys
 import qa
 from embeddings import query_vector
+from pprint import pprint
 
 
 model_name = "sentence-transformers/paraphrase-MiniLM-L6-v2"
